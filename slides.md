@@ -29,8 +29,13 @@ layout: default
 
 # Outline
 
+<div pt-35> 
+
 1. Mouse and monkey matching pennies task 
 2. Mouse and monkey matching pennies behaviour analysis 
+3. Mouse vs mouse matching pennies
+
+</div>
 
 
 ---
@@ -54,7 +59,12 @@ columns: is-6
   <img v-else-if="$clicks >= 2" src="/monkey_dataset_1_choose_right.svg" class="w-[100%]" />
 </div>
 
+
+<div v-if="$clicks >= 1">
+
 Data from Lee 2004 - Reinforcement learning and decision making in monkeys during a competitive game.
+
+</div>
 
 
 :: right :: 
@@ -157,13 +167,11 @@ columns: is-6
   <img src="/monkey_kde_per_state.png" class="opacity-100 w-[100%]"/>
 </div>
 
-<div v-click="1" class="absolute bottom-5 left-12 w-3/4">
-  <hr class="border-t-1 border-gray-600 opacity-0 mb-2" />
-  <p class="text-sm opacity-75">
-    P(WSLS) calculated as $P(X_t = Y_{t-1})$ where $X_t$ and $Y_t$ are the animal's and opponents choices on trial $t$
-  </p>
+<div v-click="1" class="absolute bottom-5 left-12 w-[45%] text-sm opacity-75">
+  <hr class="border-t border-gray-600 opacity-0 mb-2" />
+  
+  > P(WSLS) calculated as $P(X_t = Y_{t-1})$ where <br> $X_t$ and $Y_t$ are the animal’s and opponent’s choices on trial $t$.
 </div>
-
 
 :: right :: 
 
@@ -174,4 +182,67 @@ columns: is-6
   <img src="/mutual_info_and_logodds_p_stochastic_lme_fit.png" class="opacity-100 w-[50%]"/>
 </div>
 
-TODO: Add details about calculation in footnote
+---
+transition: fade-out 
+layout: default
+---
+
+
+# Mouse vs mouse matching pennies
+
+
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  const video = document.getElementById('myvideo')
+  if (!video) return
+
+  // Hide controls initially
+  video.controls = false
+
+  // When user clicks the video, start playing
+  video.addEventListener('click', () => {
+    video.play()
+  })
+
+  // When it ends: pause, show the last frame, hide controls
+  video.addEventListener('ended', () => {
+    video.pause()
+    video.currentTime = video.duration
+    video.controls = false
+  })
+})
+</script>
+
+<div class="flex items-center justify-center gap-2 pt-20"> 
+  <img src="/mouse_vs_mouse_cartoon.png" class="opacity-100 w-[20%]"/> 
+
+  <video
+id="myvideo"
+src="/animation.mp4"
+controls
+preload="auto"
+class="w-[120%]"
+onloadedmetadata="this.playbackRate = 2;"
+/>
+
+</div>
+
+
+---
+transition: fade-out 
+layout: default
+---
+
+# Randomness and rewards when playing against computer vs. mice 
+
+<img src="/JOA-M-0029_reward_and_entropy_during_solo_vs_social.png" class="opacity-100 w-[75%]"/>
+
+<img src="/JOA-M-0033_reward_and_entropy_during_solo_vs_social.png" class="opacity-100 w-[75%]"/>
+
+
+<div v-click class="absolute top-[60%] left-180 w-[40%] -translate-y-1/2">
+  <img src="/entropy_reward_correlation.png" class="opacity-100 w-[60%]"/>
+</div>
+
