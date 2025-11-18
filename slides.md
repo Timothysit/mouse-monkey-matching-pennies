@@ -80,6 +80,36 @@ Data from Lee 2004 - Reinforcement learning and decision making in monkeys durin
 ---
 transition: fade-out 
 layout: two-cols-title 
+columns: is-5
+---
+
+:: title :: 
+
+# Clustering behaviour into states via GLM-HMM 
+
+:: left :: 
+
+## Model
+
+
+
+<img src="/GLM-HMM-cartoon_v1.svg" class="opacity-100 w-[100%]" v-click="1"/>
+
+
+:: right :: 
+
+## Verification with synthetic data 
+
+<img src="/p_state_4_states.svg" class="opacity-100 w-[100%]" v-click="2"/>
+
+<img src="/recovered_glm_weights_4_states.svg" class="opacity-100 w-[100%]" v-click="3"/>
+
+
+
+
+---
+transition: fade-out 
+layout: two-cols-title 
 columns: is-6
 ---
 
@@ -87,12 +117,12 @@ columns: is-6
 
 # Clustering behaviour into states via GLM-HMM 
 
-<img src="/GLM-HMM-cartoon_v1.svg" class="opacity-100 w-[40%]" v-click="1"/>
-
 
 :: left :: 
 
 ## Monkey
+
+<img src="/delta_logloss_per_state_balanced_trials_per_algorithm.svg" class="opacity-100 w-[55%]" v-click="3"/>
 
 <img src="/monkey_three_states_weight.svg" class="opacity-100 w-[100%]" v-click="3"/>
 
@@ -102,6 +132,7 @@ columns: is-6
 
 ## Mouse
 
+<img src="/glmhmm_CV_delta_test_ll.svg" class="opacity-100 w-[50%]" v-click="1"/>
 
 
 <img src="/clustered_glm_weights_cosyneabstract2025.svg" class="opacity-100 w-[100%]" v-click="2"/>
@@ -158,6 +189,7 @@ columns: is-6
 
 # We can relate states to other behavioural measures 
 
+
 :: left :: 
 
 ## Monkey 
@@ -178,9 +210,80 @@ columns: is-6
 ## Mouse 
 
 <div v-click="2">
-  <img src="/entropy_and_log_p_stochastic_lme_fit.png" class="opacity-100 w-[50%]"/>
-  <img src="/mutual_info_and_logodds_p_stochastic_lme_fit.png" class="opacity-100 w-[50%]"/>
+  <img src="/clustered_glm_weights_cosyneabstract2025.svg" class="opacity-100 w-[90%]"/>
+  <img src="/mouse_kde_per_state.svg" class="opacity-100 w-[100%]"/>
 </div>
+
+---
+transition: fade-out 
+layout: two-cols-title 
+columns: is-6
+---
+
+:: title :: 
+
+# We can relate states to other behavioural measures 
+
+
+:: left :: 
+
+## Monkey 
+
+<div v-click="2" class="flex gap-4 mt-20">
+  <img src="/monkey_block_entropy_and_p_stochastic_logodds_lme_fit.svg" class="opacity-100 w-[50%]"/> 
+  <img src="/monkey_mutual_info_and_p_stochastic_logodds_lme_fit.svg" class="opacity-100 w-[50%]"/>
+</div>
+
+
+:: right :: 
+## Mouse 
+
+<div v-click="1" class="flex gap-4 mt-20">
+  <img src="/entropy_and_log_p_stochastic_lme_fit.png" class="opacity-100 w-[47%]"/> 
+  <img src="/mutual_info_and_logodds_p_stochastic_lme_fit.png" class="opacity-100 w-[47%]"/>
+</div>
+
+
+---
+transition: fade-out 
+layout: two-cols-title 
+columns: is-6
+---
+
+:: title :: 
+
+# Are monkeys better at the task than mice?
+
+
+<div class="flex gap-4 mt-20">
+  <img src="/monkey_p_stochastic_heatmap.svg" class="opacity-100 w-[25%]"/> 
+  <img src="/mouse_p_stochastic_heatmap.svg" class="opacity-100 w-[25%]"/>
+  <img src="/mouse_and_monkey_segment_length_and_entropy.svg" class="opacity-100 w-[25%]"/>
+  <img src="/public/mouse_and_monkey_entropy_vs_reward_rate_segment_length_300.svg" class="opacity-100 w-[25%]"/>
+
+</div>
+
+
+
+---
+transition: fade-out 
+layout: default
+---
+
+# Interim summary 
+
+<div class="mt-30">
+
+<v-clicks>
+
+1. In the monkey dataset, GLM-HMM can recover behavioural strategies and their changes as monkeys adapt to different computer opponents 
+2. Both monkeys and mice learn to increase their choice randomness, characterised by a "stochastic state"
+3. There is some evidence to suggest that monkeys may be more random in these stochastic states and can sustain theses stochastic states for longer
+
+</v-clicks>
+
+</div>
+
 
 ---
 transition: fade-out 
