@@ -189,7 +189,7 @@ columns: is-6
 ## Monkey
 
 
-<div class="relative w-full h-[500px] mt-0">
+<div class="relative w-full h-[500px] mt-0" v-click="3">
   <!-- Image 1: visible on click 3 only -->
   <img
     src="/C_state_probabilities_per_session.png"
