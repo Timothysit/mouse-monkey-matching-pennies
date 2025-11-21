@@ -118,10 +118,10 @@ columns: is-5
 ## Verification with synthetic data 
 
 
-<img src="/recovered_glm_weights_4_states.svg" class="opacity-100 w-[100%]" v-click="3"/>
+<img src="/recovered_glm_weights_4_states_1.svg" class="opacity-100 w-[100%]" v-click="2"/>
 
 
-<img src="/p_state_4_states.svg" class="opacity-100 w-[100%]" v-click="2"/>
+<img src="/p_state_4_states.svg" class="opacity-100 w-[100%]" v-click="3"/>
 
 
 <div v-click="1" class="absolute bottom-40 left-12 w-[35%] text-sm opacity-75">
@@ -161,7 +161,7 @@ columns: is-6
 <img src="/glmhmm_CV_delta_test_ll.svg" class="opacity-100 w-[50%]" v-click="1"/>
 
 
-<img src="/clustered_glm_weights_cosyneabstract2025.svg" class="opacity-100 w-[100%]" v-click="2"/>
+<img src="/glmhmm_glm_weights (1).png" class="opacity-100 w-[100%]" v-click="2"/>
 
 
 <div v-click="4"
@@ -334,7 +334,7 @@ columns: is-6
 ## Mouse 
 
 <div v-click="2">
-  <img src="/clustered_glm_weights_cosyneabstract2025.svg" class="opacity-100 w-[90%]"/>
+  <img src="/glmhmm_glm_weights (1).png" class="opacity-100 w-[90%]"/>
 </div>
 
 <div class="relative w-full h-[150px] mouse-kde-reveal">
@@ -475,7 +475,7 @@ layout: default
 
 1. In the monkey dataset, GLM-HMM can recover behavioural strategies and their changes as monkeys adapt to different computer opponents 
 2. Both monkeys and mice learn to increase their choice randomness, characterised by a "stochastic state"
-3. There is some evidence to suggest that monkeys may be more random in these stochastic states and can sustain theses stochastic states for longer
+3. There is some evidence to suggest that monkeys may be more random in these stochastic states and can sustain theses stochastic states for longer, but the reward rate achieved by monkeys and mice are similar.
 
 </v-clicks>
 
@@ -499,12 +499,29 @@ layout: default
   </div>
 
   <!-- Second row, appears on second click -->
-  <div v-click="2" class="flex justify-center gap-8 w-[85%]">
+  <div v-click="3" class="flex justify-center gap-8 w-[85%]">
     <img src="/mouse_vs_mouse_cartoon_diagonal.png" class="opacity-100 w-[40%]"/>
     <img src="/mouse_opponent_choice_sequences.png" class="opacity-100 w-[60%]"/>
   </div>
 
 </div>
+
+
+<div v-click="2"
+     class="absolute bottom-70 left-50 w-[28%] 
+            bg-yellow-200/90 text-black text-lg font-semibold 
+            p-4 rounded-xl shadow-xl leading-snug">
+  Best strategy is stationary : always be random 
+</div>
+
+<div v-click="4"
+     class="absolute bottom-10 left-50 w-[28%] 
+            bg-yellow-200/90 text-black text-lg font-semibold 
+            p-4 rounded-xl shadow-xl leading-snug">
+  Best strategy can change over time.
+  Imperfect opponent can be exploited
+</div>
+
 
 
 ---
