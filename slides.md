@@ -16,9 +16,13 @@ layout: cover
 ---
 
 
-# Monkey and mouse matching pennies
+<h1 class="text-left-align">
+  Monkey and mouse <br> matching pennies
+</h1>
 
-Timothy Sit
+
+Timothy Sit <br>
+2025-11-21
 
 
 
@@ -120,6 +124,14 @@ columns: is-5
 <img src="/p_state_4_states.svg" class="opacity-100 w-[100%]" v-click="2"/>
 
 
+<div v-click="1" class="absolute bottom-40 left-12 w-[35%] text-sm opacity-75">
+  <hr class="border-t border-gray-600 opacity-0 mb-2" />
+  
+  > Generalised linear model - Hidden Markov Model (GLM-HMM) from Ashwood 2022: Mice alternate between discrete strategies during perceptual decision-making
+</div>
+
+
+
 
 ---
 transition: fade-out 
@@ -151,6 +163,14 @@ columns: is-6
 
 <img src="/clustered_glm_weights_cosyneabstract2025.svg" class="opacity-100 w-[100%]" v-click="2"/>
 
+
+<div v-click="4"
+     class="absolute bottom-50 left-80 w-[35%] 
+            bg-yellow-200/90 text-black text-lg font-semibold 
+            p-4 rounded-xl shadow-xl leading-snug">
+  Both mouse and monkey's behaviour can be characterised into 3 states,  
+  with a common stochastic state
+</div>
 
 
 ---
@@ -217,6 +237,16 @@ columns: is-6
 <div v-click="1" class="absolute top-[70%] left-120 w-[70%] -translate-y-1/2">
   <img src="/average_pstate_smooth_cosyneabstract2025.svg" class="opacity-100 w-[50%]"/>
 </div>
+
+
+<div v-click="7"
+     class="absolute bottom-50 left-80 w-[35%] 
+            bg-yellow-200/90 text-black text-lg font-semibold 
+            p-4 rounded-xl shadow-xl leading-snug">
+  In monkeys, the transition between states corresponds well with the 3 computer algorithms.
+  In mice, there is a general increase in stochastic states over training.
+</div>
+
 
 
 ---
@@ -369,6 +399,14 @@ columns: is-6
 </div>
 
 
+<div v-click="3"
+     class="absolute bottom-30 left-80 w-[35%] 
+            bg-yellow-200/90 text-black text-lg font-semibold 
+            p-4 rounded-xl shadow-xl leading-snug">
+  Overall, unsupervised clustering of left/right choices via GLM-HMM captures changes in  higher-order statistics of behaviour (entropy, mutual info, WSLS)
+</div>
+
+
 ---
 transition: fade-out 
 layout: two-cols-title 
@@ -399,12 +437,27 @@ columns: is-6
 
   <!-- RIGHT: 2×2 grid -->
   <div class="grid grid-cols-2 gap-4 w-1/2">
-    <img v-click="6" src="/mouse_and_monkey_segment_length_and_entropy.svg" class="w-full" />
-    <img v-click="7" src="/mouse_and_monkey_entropy_vs_reward_rate_segment_length_300.svg" class="w-full" />
-    <img v-click="8" src="/mouse_and_monkey_reward_and_entropy_as_func_of_seg_length.svg" class="w-full" />
+    <img v-click="7" src="/mouse_and_monkey_segment_length_and_entropy.svg" class="w-full" />
+    <img v-click="8" src="/mouse_and_monkey_entropy_vs_reward_rate_segment_length_300.svg" class="w-full" />
+    <img v-click="9" src="/mouse_and_monkey_reward_and_entropy_as_func_of_seg_length.svg" class="w-full" />
     <!-- Optional: use v-click="9" if you want an extra step -->
     <div></div>
   </div>
+</div>
+
+<div v-click="6"
+     class="absolute bottom-0 left-30 w-[35%] 
+            bg-yellow-200/90 text-black text-lg font-semibold 
+            p-4 rounded-xl shadow-xl leading-snug">
+  Overall, monkeys can sustain stochastic states better. But how about if we focus on stochastic sequences? 
+</div>
+
+<div v-click="10"
+     class="absolute bottom-30 left-170 w-[28%] 
+            bg-yellow-200/90 text-black text-lg font-semibold 
+            p-4 rounded-xl shadow-xl leading-snug">
+  Higher entropy in monkeys 
+  Similar reward rates
 </div>
 
 
